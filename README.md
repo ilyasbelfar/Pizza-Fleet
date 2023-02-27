@@ -15,6 +15,10 @@ Built from scratch with MERN Stack (ReactJS, NodeJS, ExpressJS, MongoDB).</em>âœ
 
 - Pizza menu: Customers can browse the available pizza menu and select the pizzas they want to order. They can also see the details of each pizza, including the description, toppings, and price.
 
+- Search bar: Allows users to search for pizzas by name.
+
+- Price range slider filter: Allows users to filter pizzas by price.
+
 - Pizza selection and quantity: Customers can select the pizzas they want to order and specify the quantity.
 
 - Shopping cart management: Customers can add pizzas to their shopping cart, update the quantity of a pizza item, or delete an pizza item from the shopping cart.

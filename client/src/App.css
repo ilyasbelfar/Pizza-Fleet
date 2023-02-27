@@ -1,0 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Golos+Text&display=swap");
+
+div#root {
+  position: relative;
+  overflow-x: hidden;
+}

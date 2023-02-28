@@ -71,9 +71,11 @@ const OrderDetailsModal = ({ order, subTotal }) => {
         </Text>
       </Group>
       <Group my={10} position="apart">
-        <Text>Discount 10%</Text>
+        <Text>Discount</Text>
         <Text fz="sm" fw={700}>
-          -DA5.00
+          {order?.cart?.discountedPrice === 0
+            ? "- DA0"
+            : `- DA${order?.cart?.discountedPrice}`}
         </Text>
       </Group>
 

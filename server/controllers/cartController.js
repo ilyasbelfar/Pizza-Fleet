@@ -233,6 +233,11 @@ module.exports = {
             if (item.pizza._id.toString() === pizzaId) {
               if (item.pizza._id.toString() === coupon.pizza.toString()) {
                 item.quantity = quantity;
+                cart.discountedPrice =
+                  (item.pizza.price *
+                    item.quantity *
+                    coupon.discountPercentage) /
+                  100;
                 item.subTotal =
                   quantity *
                   ((item.pizza.price * (100 - coupon.discountPercentage)) /

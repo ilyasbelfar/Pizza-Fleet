@@ -36,12 +36,6 @@ const Checkout = () => {
   }
 
   useEffect(() => {
-    if (Object?.entries(cart)?.length === 0) {
-      navigate("/cart");
-    }
-  }, [cart, navigate]);
-
-  useEffect(() => {
     if (addOrder.success) {
       navigate("/order-placed");
     }

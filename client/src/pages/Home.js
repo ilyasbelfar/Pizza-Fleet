@@ -31,6 +31,7 @@ const Home = () => {
     };
   }, [dispatch, filters]);
 
+  useMemo(() => {
   success &&
     showNotification({
       autoClose: 3000,
@@ -52,7 +53,9 @@ const Home = () => {
         boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
       }),
     });
+  }, [success, message]);
 
+  useMemo(() => {
   error &&
     showNotification({
       autoClose: 3000,
@@ -74,6 +77,7 @@ const Home = () => {
         boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
       }),
     });
+  }, [error, message]);
 
   return (
     <Container size="lg" py="xl">

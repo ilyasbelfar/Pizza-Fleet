@@ -91,7 +91,7 @@ const MainHeader = ({ onToggleColorScheme }) => {
             <Image
               width={60}
               height={60}
-              src="https://res.cloudinary.com/djuxwysbl/image/upload/v1677364239/PizzaDelivery/Pizza-WebApp-Logo_ohoqlg.png"
+              src="https://res.cloudinary.com/djuxwysbl/image/upload/v1677691074/PizzaDelivery/Pizza-WebApp-Logo_snyruy.png"
             />
           </Link>
           <Group>

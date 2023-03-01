@@ -74,143 +74,161 @@ const ShoppingCart = () => {
     });
   }
 
-  if (updateCart.success) {
-    showNotification({
-      autoClose: 3000,
-      title: "Success",
-      message: updateCart.message,
-      icon: <IoCheckmarkOutline size={20} />,
-      color: "green",
-      styles: (theme) => ({
-        title: {
-          color:
-            theme.colorScheme === "dark" ? theme.colors.white : theme.black,
-          fontWeight: 500,
-          fontSize: 16,
-        },
-        description: {
-          color: theme.colors.gray[6],
-          fontSize: 15,
-        },
-        boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-      }),
-    });
-  }
+  useMemo(() => {
+    if (updateCart.success) {
+      showNotification({
+        autoClose: 3000,
+        title: "Success",
+        message: updateCart.message,
+        icon: <IoCheckmarkOutline size={20} />,
+        color: "green",
+        styles: (theme) => ({
+          title: {
+            color:
+              theme.colorScheme === "dark" ? theme.colors.white : theme.black,
+            fontWeight: 500,
+            fontSize: 16,
+          },
+          description: {
+            color: theme.colors.gray[6],
+            fontSize: 15,
+          },
+          boxShadow:
+            "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        }),
+      });
+    }
+  }, [updateCart.success, updateCart.message]);
 
-  if (updateCart.error) {
-    showNotification({
-      autoClose: 3000,
-      title: "Error",
-      message: updateCart.message,
-      icon: <IoCloseOutline size={20} />,
-      color: "red",
-      styles: (theme) => ({
-        title: {
-          color:
-            theme.colorScheme === "dark" ? theme.colors.white : theme.black,
-          fontWeight: 500,
-          fontSize: 16,
-        },
-        description: {
-          color: theme.colors.gray[6],
-          fontSize: 15,
-        },
-        boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-      }),
-    });
-  }
+  useMemo(() => {
+    if (updateCart.error) {
+      showNotification({
+        autoClose: 3000,
+        title: "Error",
+        message: updateCart.message,
+        icon: <IoCloseOutline size={20} />,
+        color: "red",
+        styles: (theme) => ({
+          title: {
+            color:
+              theme.colorScheme === "dark" ? theme.colors.white : theme.black,
+            fontWeight: 500,
+            fontSize: 16,
+          },
+          description: {
+            color: theme.colors.gray[6],
+            fontSize: 15,
+          },
+          boxShadow:
+            "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        }),
+      });
+    }
+  }, [updateCart.error, updateCart.message]);
 
-  if (removeFromCart.success) {
-    showNotification({
-      autoClose: 3000,
-      title: "Success",
-      message: removeFromCart.message,
-      icon: <IoCheckmarkOutline size={20} />,
-      color: "green",
-      styles: (theme) => ({
-        title: {
-          color:
-            theme.colorScheme === "dark" ? theme.colors.white : theme.black,
-          fontWeight: 500,
-          fontSize: 16,
-        },
-        description: {
-          color: theme.colors.gray[6],
-          fontSize: 15,
-        },
-        boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-      }),
-    });
-  }
+  useMemo(() => {
+    if (removeFromCart.success) {
+      showNotification({
+        autoClose: 3000,
+        title: "Success",
+        message: removeFromCart.message,
+        icon: <IoCheckmarkOutline size={20} />,
+        color: "green",
+        styles: (theme) => ({
+          title: {
+            color:
+              theme.colorScheme === "dark" ? theme.colors.white : theme.black,
+            fontWeight: 500,
+            fontSize: 16,
+          },
+          description: {
+            color: theme.colors.gray[6],
+            fontSize: 15,
+          },
+          boxShadow:
+            "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        }),
+      });
+    }
+  }, [removeFromCart.success, removeFromCart.message]);
 
-  if (removeFromCart.error) {
-    showNotification({
-      autoClose: 3000,
-      title: "Error",
-      message: removeFromCart.message,
-      icon: <IoCloseOutline size={20} />,
-      color: "red",
-      styles: (theme) => ({
-        title: {
-          color:
-            theme.colorScheme === "dark" ? theme.colors.white : theme.black,
-          fontWeight: 500,
-          fontSize: 16,
-        },
-        description: {
-          color: theme.colors.gray[6],
-          fontSize: 15,
-        },
-        boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-      }),
-    });
-  }
+  useMemo(() => {
+    if (removeFromCart.error) {
+      showNotification({
+        autoClose: 3000,
+        title: "Error",
+        message: removeFromCart.message,
+        icon: <IoCloseOutline size={20} />,
+        color: "red",
+        styles: (theme) => ({
+          title: {
+            color:
+              theme.colorScheme === "dark" ? theme.colors.white : theme.black,
+            fontWeight: 500,
+            fontSize: 16,
+          },
+          description: {
+            color: theme.colors.gray[6],
+            fontSize: 15,
+          },
+          boxShadow:
+            "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        }),
+      });
+    }
+  }, [removeFromCart.error, removeFromCart.message]);
 
-  if (applyCouponState.success) {
-    showNotification({
-      autoClose: 3000,
-      title: "Success",
-      message: applyCouponState.message,
-      icon: <IoCheckmarkOutline size={20} />,
-      color: "green",
-      styles: (theme) => ({
-        title: {
-          color:
-            theme.colorScheme === "dark" ? theme.colors.white : theme.black,
-          fontWeight: 500,
-          fontSize: 16,
-        },
-        description: {
-          color: theme.colors.gray[6],
-          fontSize: 15,
-        },
-        boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-      }),
-    });
-  }
+  useMemo(() => {
+    if (applyCouponState.success) {
+      showNotification({
+        autoClose: 3000,
+        title: "Success",
+        message: applyCouponState.message,
+        icon: <IoCheckmarkOutline size={20} />,
+        color: "green",
+        styles: (theme) => ({
+          title: {
+            color:
+              theme.colorScheme === "dark" ? theme.colors.white : theme.black,
+            fontWeight: 500,
+            fontSize: 16,
+          },
+          description: {
+            color: theme.colors.gray[6],
+            fontSize: 15,
+          },
+          boxShadow:
+            "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        }),
+      });
+    }
+  }, [applyCouponState.success, applyCouponState.message]);
 
-  if (applyCouponState.error) {
-    showNotification({
-      autoClose: 3000,
-      title: "Error",
-      message: applyCouponState.message,
-      icon: <IoCloseOutline size={20} />,
-      color: "red",
-      styles: (theme) => ({
-        title: {
-          color:
-            theme.colorScheme === "dark" ? theme.colors.white : theme.black,
-          fontWeight: 500,
-          fontSize: 16,
-        },
-        description: {
-          color: theme.colors.gray[6],
-          fontSize: 15,
-        },
-        boxShadow: "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
-      }),
-    });
-  }
+  useMemo(() => {
+    if (applyCouponState.error) {
+      showNotification({
+        autoClose: 3000,
+        title: "Error",
+        message: applyCouponState.message,
+        icon: <IoCloseOutline size={20} />,
+        color: "red",
+        styles: (theme) => ({
+          title: {
+            color:
+              theme.colorScheme === "dark" ? theme.colors.white : theme.black,
+            fontWeight: 500,
+            fontSize: 16,
+          },
+          description: {
+            color: theme.colors.gray[6],
+            fontSize: 15,
+          },
+          boxShadow:
+            "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)",
+        }),
+      });
+    }
+  }, [applyCouponState.error, applyCouponState.message]);
 
   return (
     <Container size="lg" className={classes.wrapper}>

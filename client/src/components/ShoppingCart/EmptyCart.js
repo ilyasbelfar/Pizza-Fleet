@@ -24,7 +24,7 @@ const EmptyCart = () => {
             height: "auto",
           },
         })}
-        src="https://res.cloudinary.com/djuxwysbl/image/upload/v1677176878/PizzaDelivery/Empty_Cart_SVG_kld2xp.png"
+        src="https://res.cloudinary.com/djuxwysbl/image/upload/v1677691336/PizzaDelivery/Empty_Cart_SVG_vs3wzs.png"
         alt="Empty Cart"
       />
       <Text my="lg">

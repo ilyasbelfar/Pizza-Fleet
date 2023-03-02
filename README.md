@@ -42,6 +42,8 @@ Built from scratch with MERN Stack (ReactJS, NodeJS, ExpressJS, MongoDB).</em>âœ
 - ExpressJS
 - NodeJS
 - MongoDB
+- Redux
+- Redux Toolkit
 - Mantine UI V5
 
 ---

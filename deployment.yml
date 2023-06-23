@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pizza-deployment
+  labels:
+    app: pizza
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pizza
+  template:
+    metadata:
+      labels:
+        app: pizza
+    spec:
+      containers:
+      - name: client
+        image: nareshchandanbatve/pizza:client
+        ports:
+        - containerPort: 3000
+      - name: server
+        image: nareshchandanbatve/pizza:server
+        ports:
+        - containerPort: 5000
